@@ -1,4 +1,4 @@
-package Integers
+package __Integers
 
 import (
 	"fmt"
