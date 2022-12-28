@@ -10,6 +10,7 @@ type result struct {
 func CheckWebsites(wc WebsiteChecker, urls []string) map[string]bool {
 	results := make(map[string]bool)
 	resultChannel := make(chan result)
+
 	for _, url := range urls {
 		go func(u string) {
 			resultChannel <- result{u, wc(u)}
